@@ -16,3 +16,7 @@ where
 salary < (
 SELECT MAX(salary)  from dbo.Employees 
 )
+
+ -- Find Duplicaterecords in table 
+Select name,COUNT(*) AS DUPLICATES from Employees
+GROUP BY name Having COUNT(*)>1 
